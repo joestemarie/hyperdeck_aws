@@ -59,7 +59,7 @@ run:
 	@$(PRINT_OK)
 
 prepare:
-	git archive -o docker/mysite.tar HEAD
+	git archive -o docker/hyperdeck_aws.tar HEAD
 	@$(PRINT_OK)
 
 build:
@@ -68,7 +68,7 @@ build:
 
 clean:
 
-	rm -f docker/mysite.tar
+	rm -f docker/hyperdeck_aws.tar
 	docker rm -f $$(docker ps -a -q)
 	@$(PRINT_OK)
 
